@@ -276,8 +276,6 @@ button:focus,
     bottom     : 0;
     background : linear-gradient(
             -30deg,
-            /* rgba(42, 84, 245, 0.5) 0%,
-            rgba(42, 84, 245, 0.5) 40%, */
             rgba(50, 57, 88, 0.5) 0%,
             rgba(50, 54, 71, 0.5) 35%,
             transparent 60%,
@@ -325,11 +323,11 @@ button:focus,
 
 .header .content .social-icon li a {
     display       : block;
-    font-size     : 12px;
+    font-size     : 15px;
     color         : #ffffff;
-    width         : 34px;
-    height        : 34px;
-    line-height   : 33px;
+    width         : 35px;
+    height        : 35px;
+    line-height   : 34px;
     text-align    : center;
     border-radius : 100%;
     border        : 2px solid rgba(255, 255, 255, .2);
