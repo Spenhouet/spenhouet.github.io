@@ -1,4 +1,4 @@
-baseurl: ""
+# baseurl: ""
 url: "https://spenhouet.com"
 
 lsi: false
@@ -25,10 +25,6 @@ collections:
     output: false
   sections:
     output: false
-    order:
-      - projects.html
-      - work_experience.html
-      - education.html
 
 exclude:
   - .sass-cache/

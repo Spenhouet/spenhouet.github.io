@@ -34,7 +34,8 @@ layout: default
     <div class="right-col-block blocks">
         <!-- {% include about.html %} -->
 
-        {% for section in site.sections %}
+        {% assign sections_sorted = site.sections | sort: "order" %}
+        {% for section in sections_sorted %}
         <section class="section-wrapper {% cycle '', 'gray-bg' %}">
             <div class="container-fluid">
                 <div class="row">
