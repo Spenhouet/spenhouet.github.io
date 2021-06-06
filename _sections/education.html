@@ -1,0 +1,16 @@
+---
+title: Education
+---
+
+{% assign education_sorted = site.education | sort: 'path' | reverse %}
+{% for education in education_sorted %}
+<div class="col-md-12">
+    <div class="content-item">
+        <small>{{ education.from }} - {{ education.until }}</small>
+        <h3>{{ education.what }}</h3>
+        <h4>{{ education.institute }}</h4>
+        <p>{{ education.location }}</p>
+    </div>
+    <!-- .experience-item -->
+</div>
+{% endfor %}
