@@ -1,0 +1,16 @@
+---
+title: Work Experience
+---
+
+{% assign work_experiences_sorted = site.work_experiences | sort: 'path' | reverse %}
+{% for work_experience in work_experiences_sorted %}
+<div class="col-md-12">
+    <div class="content-item">
+        <small>{{ work_experience.from }} - {{ work_experience.until }}</small>
+        <h3>{{ work_experience.position }}</h3>
+        <h4>{{ work_experience.employer }}</h4>
+        <p>{{ work_experience.location }}</p>
+    </div>
+    <!-- .experience-item -->
+</div>
+{% endfor %}

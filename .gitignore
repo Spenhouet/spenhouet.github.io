@@ -8,3 +8,12 @@ original/
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+
+### jekyll ###
+
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+Gemfile.lock
