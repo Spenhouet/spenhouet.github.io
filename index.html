@@ -1,32 +1,22 @@
 ---
 layout: default
+title: Online CV
+background: /img/img-profile.jpg
 ---
 
 <div class="columns-block">
     <div class="left-col-block blocks">
         <header class="header">
-            <div class="content text-center">
+            <div class="content text-center profile">
                 <h1>Hi, I'm Sebastian Penhouet!</h1>
 
                 <p class="lead">Head of Research & Development at <a href="https://airamed.de/"
                         style="color: #ffffff;">AIRAmed</a></p>
-                <ul class="social-icon">
-                    <li><a href="https://twitter.com/s_penhouet" aria-label="See my Twitter profile"><i
-                                class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/sebastian-penhouet/"
-                            aria-label="See my LinkedIn profile"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="https://www.xing.com/profile/Sebastian_Penhouet" aria-label="See my Xing profile"><i
-                                class="fa fa-xing" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="https://github.com/Spenhouet" aria-label="See my GitHub profile"><i
-                                class="fa fa-github" aria-hidden="true"></i></a></li>
-                    <li><a href="https://stackoverflow.com/users/2230045/spenhouet"
-                            aria-label="See my Stack Overflow profile"><i class="fa fa-stack-overflow"
-                                aria-hidden="true"></i></a></li>
-                </ul>
+                {% include social.html %}
             </div>
-            <div class="profile-img"></div>
+            <div class="profile-img"
+                style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+            </div>
         </header>
         <!-- .header-->
     </div>
