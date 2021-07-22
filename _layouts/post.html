@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="columns-block">
+    <div class="left-col-block content-focus blocks">
+        <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <a class="navbar-brand" href="{{'/' | relative_url }}">{{ site.title | escape }}</a>
+        </nav> -->
+        <header class="header">
+            <div class="content text-center blog">
+                <h1>{{ page.title }}</h1>
+                {% if page.excerpt %}
+                <p class="lead">{{ page.excerpt }}</p>
+                {% endif %}
+                <span class="meta">Posted on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
+                    content=page.content %}
+                </span>
+            </div>
+            <div class="blog-img"
+                style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+            </div>
+            <span class="credits">{{ page.credits }}</span>
+        </header>
+        <!-- .header-->
+    </div>
+
+    <div class="right-col-block content-focus blocks">
+        <section class="section-wrapper">
+            <div class="container-fluid">
+                {{ content }}
+            </div>
+            <!-- .container-fluid -->
+
+        </section>
+
+        {% include footer.html %}
+    </div>
+    <!-- .right-col-block -->
+</div>
+<!-- .columns-block -->

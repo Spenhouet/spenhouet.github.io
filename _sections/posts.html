@@ -1,0 +1,23 @@
+---
+order: 2
+title: Blog Posts
+---
+
+{% assign posts_sorted = site.posts | sort: 'date' | reverse %}
+{% for post in posts_sorted %}
+<div class="col-md-6">
+    <a class="portfolio-item" href="{{ post.url }}">
+        <div class="portfolio-thumb">
+            <img src="{{ post.background  }}" alt="">
+        </div>
+        <div class="portfolio-info">
+            <h3>{{ post.title }}</h3>
+            <small>{{ post.excerpt }}</small>
+            <small>Posted on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
+                content=post.content %}</small>
+        </div>
+        <!-- portfolio-info -->
+    </a>
+    <!-- .portfolio-item -->
+</div>
+{% endfor %}
