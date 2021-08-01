@@ -1,13 +1,24 @@
+title: Sebastian Penhouet
+description: Sebastian Penhouet's online CV and blog
+keywords: Sebastian Penhouet,CV,Profile,Research,Projects,Blog
+author: Sebastian Penhouet
 # baseurl: ""
 url: "https://spenhouet.com"
 
+# Social Profiles
+twitter_username: s_penhouet
+github_username: Spenhouet
+stackoverflow_username: 2230045/spenhouet
+linkedin_username: sebastian-penhouet
+xing_username: Sebastian_Penhouet
+
+# Build settings
 lsi: false
 safe: true
 incremental: false
 highlighter: rouge
 gist:
   noscript: false
-
 markdown: kramdown
 kramdown:
  input: GFM
@@ -15,6 +26,7 @@ kramdown:
  hard_wrap: false
  syntax_highlighter: rouge
  math_engine: mathjax
+ header_offset: 1
 
 collections:
   work_experiences:
@@ -25,6 +37,9 @@ collections:
     output: false
   sections:
     output: false
+  posts:
+    output: true
+    permalink: /blog/:categories/:year/:month/:day/:title/
 
 exclude:
   - .sass-cache/
