@@ -17,8 +17,7 @@ layout: default
                     content=page.content %}
                 </span>
             </div>
-            <div class="blog-img"
-                style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+            <div class="blog-img" style="background-image: url('{{ page.background | prepend: site.baseurl}}')">
             </div>
             <span class="credits">{{ page.credits }}</span>
         </header>
@@ -28,7 +27,9 @@ layout: default
     <div class="right-col-block content-focus blocks">
         <section class="section-wrapper">
             <div class="container-fluid">
-                {{ content }}
+                <article class="markdown-body">
+                    {{ content }}
+                </article>
             </div>
             <!-- .container-fluid -->
 
