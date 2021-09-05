@@ -17,54 +17,59 @@ Author: themehippo.com
 
 body {
     font-family: 'Hind', sans-serif;
-    font-size: 15px;
+    font-size  : 15px;
     line-height: 1.8em;
-    color: #3d3d50;
+    color      : #3d3d50;
     font-weight: 300;
-    background: #ffffff;
+    background : #ffffff;
 }
 
 /* --------------------------------------
  * Global Typography
  *------------------------------------------*/
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0 0 15px;
-    color: #2b2b3d;
+    color : #2b2b3d;
 }
 
 h1 {
-    font-size: 26px;
+    font-size  : 26px;
     line-height: 1.8em;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 18px;
+    font-size  : 18px;
     line-height: 1.8em;
     font-weight: 700;
 }
 
 h3 {
-    font-size: 16px;
+    font-size  : 16px;
     line-height: 1.8em;
     font-weight: 500;
 }
 
 h4 {
-    font-size: 15px;
+    font-size  : 15px;
     line-height: 1.8em;
     font-weight: 500;
 }
 
 h5 {
-    font-size: 15px;
+    font-size  : 15px;
     line-height: 1.5em;
     font-weight: 500;
 }
 
 h6 {
-    font-size: 15px;
+    font-size  : 15px;
     line-height: 1.5em;
 }
 
@@ -73,22 +78,26 @@ h6 {
  *------------------------------------------*/
 
 a {
-    color: #2a54f5;
-    text-decoration: none;
+    color             : #2a54f5;
+    text-decoration   : none;
     -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    -moz-transition   : all 0.3s ease 0s;
+    -o-transition     : all 0.3s ease 0s;
+    transition        : all 0.3s ease 0s;
 }
 
-a, a:active, a:focus, a:active {
+a,
+a:active,
+a:focus,
+a:active {
     text-decoration: none;
-    outline: none
+    outline        : none
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: none;
-    color: #2a54f5;
+    color          : #2a54f5;
 }
 
 p {
@@ -96,8 +105,8 @@ p {
 }
 
 ul .social-icon {
-    margin: 0;
-    padding: 0;
+    margin    : 0;
+    padding   : 0;
     list-style: none;
 }
 
@@ -106,19 +115,19 @@ ul .social-icon {
  *------------------*/
 
 .btn {
-    padding: 14px 30px 11px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 0;
-    border: 0;
+    padding       : 14px 30px 11px;
+    margin-bottom : 0;
+    font-size     : 14px;
+    font-weight   : 500;
+    border-radius : 0;
+    border        : 0;
     text-transform: uppercase;
 }
 
 .btn-lg {
     font-weight: 700;
-    font-size: 24px;
-    padding: 15px 30px;
+    font-size  : 24px;
+    padding    : 15px 30px;
 }
 
 /*btn-primary*/
@@ -127,25 +136,31 @@ ul .social-icon {
     background-color: #2a54f5;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active:focus {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:focus {
     background: #1e3eb5;
 }
 
 /*btn-default*/
 
 .btn-default {
-    color: #2a54f5;
+    color           : #2a54f5;
     background-color: transparent;
-    border: 2px solid #2a54f5;
+    border          : 2px solid #2a54f5;
 }
 
-.btn-default:hover, .btn-default:focus, .btn-default:active:focus {
-    background: #2a54f5;
-    color: #ffffff;
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active:focus {
+    background  : #2a54f5;
+    color       : #ffffff;
     border-color: #2a54f5;
 }
 
-button:focus, .btn:focus, .btn:active:focus {
+button:focus,
+.btn:focus,
+.btn:active:focus {
     outline: none;
 }
 
@@ -154,14 +169,14 @@ button:focus, .btn:focus, .btn:active:focus {
  * -------------------*/
 
 .columns-block {
-    flex-wrap: wrap;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+    flex-wrap        : wrap;
+    display          : -webkit-box;
+    display          : -moz-box;
+    display          : -ms-flexbox;
+    display          : -webkit-flex;
+    display          : flex;
     -webkit-flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content  : space-around;
 }
 
 .blocks {
@@ -169,17 +184,17 @@ button:focus, .btn:focus, .btn:active:focus {
 }
 
 .left-col-block {
-    width: 50%;
+    width     : 50%;
     text-align: center;
-    overflow: hidden;
-    position: fixed;
-    left: 0;
+    overflow  : hidden;
+    position  : fixed;
+    left      : 0;
 }
 
 .right-col-block {
-    width: 50%;
-    position: absolute;
-    right: 0;
+    width     : 50%;
+    position  : absolute;
+    right     : 0;
     box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.23);
 }
 
@@ -193,21 +208,24 @@ button:focus, .btn:focus, .btn:active:focus {
 
 @media (max-width: 600px) {
     .left-col-block {
-        width: 100%;
+        width   : 100%;
         position: relative;
     }
+
     .left-col-block.content-focus {
-        width: 100%;
+        width   : 100%;
         position: relative;
     }
+
     .right-col-block {
-        width: 100%;
-        position: relative;
+        width     : 100%;
+        position  : relative;
         box-shadow: none;
     }
+
     .right-col-block.content-focus {
-        width: 100%;
-        position: relative;
+        width     : 100%;
+        position  : relative;
         box-shadow: none;
     }
 }
@@ -226,7 +244,7 @@ button:focus, .btn:focus, .btn:active:focus {
 
 #main-wrapper {
     background: #ffffff;
-    overflow: hidden;
+    overflow  : hidden;
 }
 
 /*-------------------
@@ -253,7 +271,7 @@ button:focus, .btn:focus, .btn:active:focus {
 
 .section-title h2 {
     margin-bottom: 5px;
-    color: #bebece;
+    color        : #bebece;
 }
 
 /*-----------------------------
@@ -261,67 +279,72 @@ button:focus, .btn:focus, .btn:active:focus {
  *-------------------------------*/
 
 .header {
-    padding: 0;
-    margin: 0;
-    height: 100vh;
+    padding       : 0;
+    margin        : 0;
+    height        : 100vh;
     vertical-align: middle;
-    position: relative;
+    position      : relative;
 }
 
 .header * {
     color: #ffffff
 }
 
+.header a:hover,
+.header a:focus {
+    color: #cccccc;
+}
+
 .header .profile-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+    position           : absolute;
+    top                : 0;
+    left               : 0;
+    z-index            : -1;
+    width              : 100%;
+    height             : 100%;
+    background-size    : cover;
     background-position: center top;
 }
 
 .header .profile-img:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient( -30deg, rgba(50, 57, 88, 0.5) 0%, rgba(50, 54, 71, 0.5) 35%, transparent 60%, transparent 100%);
+    content   : "";
+    position  : absolute;
+    left      : 0;
+    top       : 0;
+    right     : 0;
+    bottom    : 0;
+    background: linear-gradient(-30deg, rgba(50, 57, 88, 0.5) 0%, rgba(50, 54, 71, 0.5) 35%, transparent 60%, transparent 100%);
 }
 
 .header .blog-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+    position           : absolute;
+    top                : 0;
+    left               : 0;
+    z-index            : 0;
+    width              : 100%;
+    height             : 100%;
+    background-size    : cover;
     background-position: center top;
 }
 
 .header .blog-img:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    content   : "";
+    position  : absolute;
+    left      : 0;
+    top       : 0;
+    right     : 0;
+    bottom    : 0;
     background: rgba(50, 54, 71, 0.5);
 }
 
 .header .content {
     position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10%;
-    z-index: 1;
+    left    : 0;
+    right   : 0;
+    width   : 100%;
+    margin  : 0 auto;
+    padding : 10%;
+    z-index : 1;
 }
 
 .header .content.profile {
@@ -333,32 +356,38 @@ button:focus, .btn:focus, .btn:active:focus {
 }
 
 .header .content h1 {
-    font-size: 36px;
-    color: #ffffff;
+    font-size  : 36px;
+    color      : #ffffff;
     line-height: 1;
-    margin: 0;
+    margin     : 0;
 }
 
 .header .content p {
     font-size: 18px;
-    color: #ffffff;
+    color    : #ffffff;
 }
 
 .header .content span {
-    font-size: 16px;
+    font-size : 16px;
     font-style: italic;
-    color: #ffffff;
+    color     : #ffffff;
+}
+
+.header .content .navbar-brand {
+    font-weight: bold;
+    margin     : 0;
+    width      : 100%;
 }
 
 .header .credits {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 0 auto;
-    padding: 5px;
-    z-index: 1;
+    bottom  : 0;
+    left    : 0;
+    right   : 0;
+    width   : 100%;
+    margin  : 0 auto;
+    padding : 5px;
+    z-index : 1;
 }
 
 .header .btn {
@@ -366,26 +395,26 @@ button:focus, .btn:focus, .btn:active:focus {
 }
 
 .header .content .social-icon {
-    margin: 0;
+    margin : 0;
     padding: 0;
     display: block;
 }
 
 .header .content .social-icon li {
     display: inline-block;
-    margin: 0 2px;
+    margin : 0 2px;
 }
 
 .header .content .social-icon li a {
-    display: block;
-    font-size: 15px;
-    color: #ffffff;
-    width: 35px;
-    height: 35px;
-    line-height: 34px;
-    text-align: center;
+    display      : block;
+    font-size    : 15px;
+    color        : #ffffff;
+    width        : 35px;
+    height       : 35px;
+    line-height  : 34px;
+    text-align   : center;
     border-radius: 100%;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border       : 2px solid rgba(255, 255, 255, .2);
 }
 
 .header .content .social-icon li a:hover {
@@ -396,6 +425,7 @@ button:focus, .btn:focus, .btn:active:focus {
     .header .profile-img {
         z-index: 1;
     }
+
     .header .content {
         z-index: 2;
     }
@@ -417,7 +447,7 @@ button:focus, .btn:focus, .btn:active:focus {
 
 .expertise-item h3 {
     margin-bottom: 5px;
-    font-weight: 700;
+    font-weight  : 700;
 }
 
 /*-------------------
@@ -429,39 +459,39 @@ button:focus, .btn:focus, .btn:active:focus {
 }
 
 .progress-item .progress-title {
-    font-size: 15px;
-    font-weight: 400;
-    display: inline-block;
+    font-size    : 15px;
+    font-weight  : 400;
+    display      : inline-block;
     margin-bottom: 5px;
 }
 
 .progress-item .progress {
-    height: 4px;
-    box-shadow: none;
+    height       : 4px;
+    box-shadow   : none;
     border-radius: 5px;
 }
 
 .progress-item .progress-bar {
     background-color: #2a54f5;
-    box-shadow: none;
-    text-align: right;
+    box-shadow      : none;
+    text-align      : right;
 }
 
 .progress-item .progress-percent {
-    font-size: 10px;
+    font-size       : 10px;
     background-color: #313131;
-    position: absolute;
-    top: 5px;
-    padding: 0 8px;
-    border-radius: 3px;
+    position        : absolute;
+    top             : 5px;
+    padding         : 0 8px;
+    border-radius   : 3px;
 }
 
 .progress-item .progress-percent::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    border-top: 6px solid #313131;
+    content     : "";
+    position    : absolute;
+    left        : 0;
+    bottom      : -4px;
+    border-top  : 6px solid #313131;
     border-right: 8px solid transparent;
 }
 
@@ -470,40 +500,40 @@ button:focus, .btn:focus, .btn:active:focus {
  *-------------------*/
 
 .portfolio-item {
-    position: relative;
-    display: block;
+    position     : relative;
+    display      : block;
     margin-bottom: 30px;
 }
 
 .portfolio-item .portfolio-thumb img {
-    height: auto;
-    display: block;
+    height   : auto;
+    display  : block;
     max-width: 100%;
 }
 
 .portfolio-item .portfolio-info {
-    position: absolute;
-    bottom: 0;
-    padding: 30px 15px 5px;
-    width: 100%;
-    background: -webkit-linear-gradient( top, transparent 0%, rgba(0, 0, 0, 0.5) 40%);
+    position  : absolute;
+    bottom    : 0;
+    padding   : 30px 15px 5px;
+    width     : 100%;
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.5) 40%);
 }
 
 .portfolio-item .portfolio-info h3 {
-    margin: 0;
+    margin     : 0;
     line-height: 1;
-    color: #ffffff;
+    color      : #ffffff;
 }
 
 .portfolio-item .portfolio-info small {
-    color: #ffffff;
+    color      : #ffffff;
     line-height: 1;
-    display: block;
-    margin: 10px 0px;
+    display    : block;
+    margin     : 10px 0px;
 }
 
 .portfolio-item:hover .portfolio-info {
-    background: -webkit-linear-gradient( top, transparent 0%, rgba(42, 84, 245, 0.5) 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(42, 84, 245, 0.5) 100%);
 }
 
 /*-------------------
@@ -515,14 +545,14 @@ button:focus, .btn:focus, .btn:active:focus {
 }
 
 .content-item h3 {
-    margin: 0 0 10px;
-    line-height: 1;
-    font-weight: bold;
+    margin        : 0 0 10px;
+    line-height   : 1;
+    font-weight   : bold;
     text-transform: uppercase;
 }
 
 .content-item h4 {
-    margin: 0;
+    margin     : 0;
     line-height: 1;
 }
 
@@ -543,18 +573,19 @@ button:focus, .btn:focus, .btn:active:focus {
  *-------------------*/
 
 .form-control {
-    height: 50px;
-    padding: 0 20px;
-    font-size: 13px;
-    line-height: 50px;
-    color: #969595;
-    border: 1px solid #cccccc;
+    height       : 50px;
+    padding      : 0 20px;
+    font-size    : 13px;
+    line-height  : 50px;
+    color        : #969595;
+    border       : 1px solid #cccccc;
     border-radius: 0;
-    box-shadow: none;
-    box-sizing: border-box;
+    box-shadow   : none;
+    box-sizing   : border-box;
 }
 
-.form-control:focus, .form-control:active {
+.form-control:focus,
+.form-control:active {
     box-shadow: none;
 }
 
@@ -570,12 +601,12 @@ button:focus, .btn:focus, .btn:active:focus {
 
 .footer .copyright-section {
     font-size: 13px;
-    color: #888888;
+    color    : #888888;
 }
 
 .footer .copyright-section .copytext {
     font-weight: 400;
-    display: block;
+    display    : block;
 }
 
 @media (max-width: 480px) {
@@ -590,30 +621,31 @@ button:focus, .btn:focus, .btn:active:focus {
 
 #preloader {
     background: #2a54f5;
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 9999;
+    bottom    : 0;
+    left      : 0;
+    position  : fixed;
+    right     : 0;
+    top       : 0;
+    z-index   : 9999;
 }
 
-#status, .status-mes {
-    background-image: url(/img/puff.svg);
+#status,
+.status-mes {
+    background-image   : url(/img/puff.svg);
     background-position: center;
-    background-repeat: no-repeat;
-    height: 200px;
-    left: 50%;
-    margin: -100px 0 0 -100px;
-    position: absolute;
-    top: 50%;
-    width: 200px;
+    background-repeat  : no-repeat;
+    height             : 200px;
+    left               : 50%;
+    margin             : -100px 0 0 -100px;
+    position           : absolute;
+    top                : 50%;
+    width              : 200px;
 }
 
 .status-mes {
     background: none;
-    left: 0;
-    margin: 0;
+    left      : 0;
+    margin    : 0;
     text-align: center;
-    top: 65%;
+    top       : 65%;
 }
