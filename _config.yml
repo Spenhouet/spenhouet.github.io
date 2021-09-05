@@ -21,12 +21,12 @@ gist:
   noscript: false
 markdown: kramdown
 kramdown:
- input: GFM
- auto_ids: true
- hard_wrap: false
- syntax_highlighter: rouge
- math_engine: mathjax
- header_offset: 1
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+  math_engine: mathjax
+  header_offset: 0
 
 collections:
   work_experiences:

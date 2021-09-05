@@ -4,11 +4,11 @@ layout: default
 
 <div class="columns-block">
     <div class="left-col-block content-focus blocks">
-        <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <a class="navbar-brand" href="{{'/' | relative_url }}">{{ site.title | escape }}</a>
-        </nav> -->
         <header class="header">
             <div class="content text-center blog">
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                    <a class="navbar-brand" href="{{'/' | relative_url }}">{{ site.title | escape }}</a>
+                </nav>
                 <h1>{{ page.title }}</h1>
                 {% if page.excerpt %}
                 <p class="lead">{{ page.excerpt }}</p>
@@ -28,7 +28,15 @@ layout: default
         <section class="section-wrapper">
             <div class="container-fluid">
                 <article class="markdown-body">
-                    {{ content }}
+                    <div id="table-of-contents">
+                        <details>
+                            <summary>Table of Content</summary>
+                            {% include toc.html html=content %}
+                        </details>
+                    </div>
+                    <div id="markdown-content">
+                        {% include anchor_headings.html html=content anchorBody="#" %}
+                    </div>
                 </article>
             </div>
             <!-- .container-fluid -->
