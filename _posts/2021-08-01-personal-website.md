@@ -3,7 +3,7 @@ layout: post
 title: "Setting up my personal website"
 excerpt: "How I used GitHub pages, Jekyll, bootstrap templates and GoDaddy to set up my personal website."
 date: 2021-08-01 13:01:00 +0200
-background: '/img/blog/2021-08-01-personal-website.jpg'
+background: "/img/blog/2021-08-01-personal-website.jpg"
 credits: Photo by <a href="https://unsplash.com/@andrewtneel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrew Neel</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
 
@@ -23,7 +23,7 @@ The [Online CV](https://uicookies.com/downloads/online-cv-html-responsive-bootst
 
 The HTML code is well-structured but very repetitive. While a CV does not change frequently to warrant some form of content management solution, I was also thinking about adding a blog (more on this [below](#adding-a-blog)).
 Via [Jeremy Howards](https://www.usfca.edu/faculty/jeremy-howard) tool [fastpages](https://fastpages.fast.ai/) I learned of [Jekyll](https://jekyllrb.com/) and its [integration with GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll). Jekyll can generate static HTML web pages via GitHub actions from content and layout documents. It feels like a content management tool for software developers.
-Converting an existing HTML page to Jekyll took some time but was straight forward following [this guide](https://jekyllrb.com/tutorials/convert-site-to-jekyll/). 
+Converting an existing HTML page to Jekyll took some time but was straight forward following [this guide](https://jekyllrb.com/tutorials/convert-site-to-jekyll/).
 
 ### Custom Domain
 
@@ -96,33 +96,33 @@ The following steps solved it for me.
 
 1. In WSL create or edit the file `/etc/wsl.conf`.
 
-    ```shell
-    sudo nano /etc/wsl.conf
-    ```
+   ```shell
+   sudo nano /etc/wsl.conf
+   ```
 
 2. Put the following in `/etc/wsl.conf` to keep the `/etc/resolv.conf` from being overwritten.
 
-    ```conf
-    [network]
-    generateResolvConf = false
-    [automount]
-    enabled = true
-    options = "metadata"
-    mountFsTab = false
-    ```
+   ```conf
+   [network]
+   generateResolvConf = false
+   [automount]
+   enabled = true
+   options = "metadata"
+   mountFsTab = false
+   ```
 
 3. Open a CMD window and shutdown the WSL
 
-    ```shell
-    wsl --shutdown
-    ```
+   ```shell
+   wsl --shutdown
+   ```
 
 4. Restart the WSL
 5. In WSL set the Google DNS server as nameserver in `/etc/resolv.conf`.
 
-    ```shell
-    echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
-    ```
+   ```shell
+   echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
+   ```
 
 6. Shutdown and restart the WSL again (step 3. and 4.)
 
@@ -142,30 +142,32 @@ As we are using the Ubuntu distro on WSL2 we can follow the [official installati
 
 1. Install all Jekyll dependencies:
 
-    ```shell
-    sudo apt-get install ruby-full build-essential zlib1g-dev
-    ```
+   ```shell
+   sudo apt-get install ruby-full build-essential zlib1g-dev
+   ```
 
 2. Set up Ruby Gem installation directory for your user folder:
 
-    ```shell
-    echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
-    echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
-    echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-    source ~/.bashrc
-    ```
+   ```shell
+   echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+   echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+   echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
 
 3. Install jekyll:
 
-    ```shell
-    gem install jekyll bundler
-    ```
+   ```shell
+   gem install public_suffix -v 5.1.1
+   gem install jekyll -v 3.9
+   gem install bundler -v 2.4.22
+   ```
 
 4. You can now install the `Gemfile`.
 
-    ```shell
-    bundle install
-    ```
+   ```shell
+   bundle install
+   ```
 
 ### Serve Jekyll with VScode
 
@@ -186,13 +188,13 @@ For the task we can simply put the command from above into a task configuration.
 
 ```json
 {
-    "label": "Jekyll serve",
-    "type": "shell",
-    "command": "bundle exec jekyll serve --force_polling",
-    "presentation": {
-        "reveal": "always",
-        "panel": "dedicated"
-    },
+  "label": "Jekyll serve",
+  "type": "shell",
+  "command": "bundle exec jekyll serve --force_polling",
+  "presentation": {
+    "reveal": "always",
+    "panel": "dedicated"
+  }
 }
 ```
 
@@ -202,14 +204,14 @@ Since this will stay active we want to mark it as background-task.
 
 ```json
 {
-    "isBackground": true,
-    "problemMatcher": {
-        "background": {
-            "activeOnStart": true,
-            "beginsPattern": "^\\s*Jekyll Feed: Generating feed for posts",
-            "endsPattern": "^.*done in"
-        },
+  "isBackground": true,
+  "problemMatcher": {
+    "background": {
+      "activeOnStart": true,
+      "beginsPattern": "^\\s*Jekyll Feed: Generating feed for posts",
+      "endsPattern": "^.*done in"
     }
+  }
 }
 ```
 
@@ -220,21 +222,18 @@ VScode can also scan Jekyll warnings and exceptions by defining a `pattern` for 
 
 ```json
 {
-    "problemMatcher": {
-        "fileLocation": [
-            "relative",
-            "${workspaceFolder}"
-        ],
-        "pattern": [
-            {
-                "regexp": "^\\s*Liquid (Warning|Exception):.*line (\\d+)\\): (.*) in (.*)$",
-                "severity": 1,
-                "line": 2,
-                "message": 3,
-                "file": 4,
-            }
-        ],
-    }
+  "problemMatcher": {
+    "fileLocation": ["relative", "${workspaceFolder}"],
+    "pattern": [
+      {
+        "regexp": "^\\s*Liquid (Warning|Exception):.*line (\\d+)\\): (.*) in (.*)$",
+        "severity": 1,
+        "line": 2,
+        "message": 3,
+        "file": 4
+      }
+    ]
+  }
 }
 ```
 
@@ -244,40 +243,37 @@ Here is the full task configuration:
 
 ```json
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Jekyll serve",
-            "type": "shell",
-            "command": "bundle exec jekyll serve --force_polling",
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated"
-            },
-            "isBackground": true,
-            "problemMatcher": {
-                "owner": "jekyll",
-                "fileLocation": [
-                    "relative",
-                    "${workspaceFolder}"
-                ],
-                "pattern": [
-                    {
-                        "regexp": "^\\s*Liquid (Warning|Exception):.*line (\\d+)\\): (.*) in (.*)$",
-                        "severity": 1,
-                        "line": 2,
-                        "message": 3,
-                        "file": 4,
-                    }
-                ],
-                "background": {
-                    "activeOnStart": true,
-                    "beginsPattern": "^\\s*Jekyll Feed: Generating feed for posts",
-                    "endsPattern": "^.*done in"
-                },
-            }
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Jekyll serve",
+      "type": "shell",
+      "command": "bundle exec jekyll serve --force_polling",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "jekyll",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": [
+          {
+            "regexp": "^\\s*Liquid (Warning|Exception):.*line (\\d+)\\): (.*) in (.*)$",
+            "severity": 1,
+            "line": 2,
+            "message": 3,
+            "file": 4
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^\\s*Jekyll Feed: Generating feed for posts",
+          "endsPattern": "^.*done in"
         }
-    ]
+      }
+    }
+  ]
 }
 ```
 
@@ -289,23 +285,23 @@ Here you can see the respective launch configuration:
 
 ```json
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "pwa-msedge",
-            "request": "launch",
-            "preLaunchTask": "Jekyll serve",
-            "name": "Launch Jekyll page",
-            "url": "http://127.0.0.1:4000",
-            "webRoot": "${workspaceFolder}"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-msedge",
+      "request": "launch",
+      "preLaunchTask": "Jekyll serve",
+      "name": "Launch Jekyll page",
+      "url": "http://127.0.0.1:4000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
 }
 ```
 
 ### Other Issues with Jekyll
 
-- GitHub pages does not use the newest version of Jekyll. Due to this, the sorting of collections through the config does not work.  
+- GitHub pages does not use the newest version of Jekyll. Due to this, the sorting of collections through the config does not work.
 - Jekyll includes still work when commented out. This can be very unexpected.
 
 ## Future Improvements
