@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spenhouet.com/open-imaging-index/sitemap.xml
