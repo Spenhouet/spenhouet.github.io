@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<section class="section-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+        </nav>
+        <article class="markdown-body">
+            {{ content }}
+        </article>
+    </div>
+</section>
+
+{% include footer.html %}
