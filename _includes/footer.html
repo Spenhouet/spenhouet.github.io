@@ -3,8 +3,10 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="copytext">&copy; 2021 Sebastian Penhouet | Design:
-                        <a href="https://uicookies.com/" style="color: #888888;">UICOOKIES</a>
+                    <div class="copytext">&copy; {{ 'now' | date: '%Y' }} Sebastian Penhouet | Design:
+                        <a href="https://uicookies.com/" style="color: #888888;">UICOOKIES</a> |
+                        <a href="{{ '/impressum/' | relative_url }}" style="color: #888888;">Legal Notice</a> |
+                        <a href="{{ '/datenschutz/' | relative_url }}" style="color: #888888;">Privacy</a>
                     </div>
                 </div>
             </div>
