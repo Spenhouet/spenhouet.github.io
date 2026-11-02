@@ -1,0 +1,16 @@
+---
+layout: legal
+title: Page not found
+permalink: /404.html
+---
+
+<script>
+  // Tintplan moved from spenhouet.com/tintplan/ to its own subdomain
+  if (location.pathname === '/tintplan' || location.pathname.startsWith('/tintplan/')) {
+    const rest = location.pathname.slice('/tintplan'.length) || '/';
+    location.replace('https://tintplan.spenhouet.com' + rest + location.search + location.hash);
+  }
+</script>
+
+<h1>Page not found</h1>
+<p>This page doesn't exist. <a href="{{ '/' | relative_url }}">Back to the start page</a>.</p>
