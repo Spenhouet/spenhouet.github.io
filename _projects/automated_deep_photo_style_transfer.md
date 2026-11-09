@@ -1,5 +1,7 @@
 ---
 year: 2019
+category: Research
+order: 1
 title: Automated Deep Photo Style Transfer
 excerpt: Automated photo realistic style transfer with automatic image segmentation and automatic segment merging based on semantic similarity
 role: Graduate Student

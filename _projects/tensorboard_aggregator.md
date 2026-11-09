@@ -1,5 +1,7 @@
 ---
 year: 2018
+category: Developer Tooling
+order: 4
 title: tensorboard-aggregator
 excerpt: Tool to aggregate multiple TensorBoard runs to new summary or csv files
 role: Graduate Student

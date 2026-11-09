@@ -11,6 +11,7 @@ title: Work Experience
         <h3>{{ work_experience.position }}</h3>
         <h4>{{ work_experience.employer }}</h4>
         <p>{{ work_experience.location }}</p>
+        {{ work_experience.content | markdownify }}
     </div>
     <!-- .experience-item -->
 </div>
