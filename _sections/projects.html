@@ -1,14 +1,20 @@
 ---
 order: 1
-title: Research & Projects
+title: Projects & Research
 ---
 
-{% assign projects_sorted = site.projects | sort: 'year' | reverse %}
-{% for project in projects_sorted %}
+{% assign groups = "Medical AI & Imaging|Developer Tooling|Research|Hobby Projects" | split: "|" %}
+{% for group in groups %}
+{% assign projects_in_group = site.projects | where: "category", group | sort: "order" %}
+{% if projects_in_group.size > 0 %}
+<div class="col-md-12">
+    <h3 class="project-group">{{ group }}</h3>
+</div>
+{% for project in projects_in_group %}
 <div class="col-md-6">
     <a class="portfolio-item" href="{{ project.document }}">
         <div class="portfolio-thumb">
-            <img src="{{ project.preview  }}" alt="">
+            <img src="{{ project.preview }}" alt="{{ project.title }}">
         </div>
         <div class="portfolio-info">
             <h3>{{ project.title }}</h3>
@@ -18,4 +24,7 @@ title: Research & Projects
     </a>
     <!-- .portfolio-item -->
 </div>
+{% endfor %}
+<div class="clearfix"></div>
+{% endif %}
 {% endfor %}

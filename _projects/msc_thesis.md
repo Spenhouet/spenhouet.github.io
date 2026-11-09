@@ -1,5 +1,7 @@
 ---
 year: 2019
+category: Research
+order: 2
 title: Semi-supervised Learning with Locally Embedded Autoencoder
 excerpt: Local disentangled representation learning. Data dependent and information preserving dimensionality reduction.
 role: Graduate Student
